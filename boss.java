@@ -5,6 +5,7 @@ public class boss extends Room implements boss1{
     Scanner scanner = new Scanner(System.in);
 
     public boss(String type, int number, Double price) {
+
         super(type, number, price);
     }
 
@@ -24,10 +25,13 @@ public class boss extends Room implements boss1{
                 rooms[2].setNumber(rooms[2].getNumber()+1);
                 System.out.println("已新建一个豪华套装间");
                 break;
+            default:
+                System.out.println("输入错误，请输入1~3：");
         }
+        //</editor-fold>
         System.out.println("新建后的房间信息如下");
         view();
-    };
+    }
     public  void dismantle(){//拆除
         System.out.println("选择拆除类型：");
         System.out.println("1.标准单人间 2.标准双人间 3.豪华套装间");
@@ -47,7 +51,7 @@ public class boss extends Room implements boss1{
         }
         System.out.println("现如今的房间信息如下：");
         view();
-    };//拆除房间
+    }//拆除房间
     public  void fitment(){//装修
         System.out.println("请选择需要装修的房间类型（将标准间装修成套装间）");
         System.out.println("1.标准单人间 2.标准双人间 ");

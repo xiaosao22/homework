@@ -1,7 +1,4 @@
 package com.hspedu.encap.aides;
-
-import java.lang.reflect.Type;
-
 public class Room {
     private String type;//（房间类型）
     private int number;//（房间数）
